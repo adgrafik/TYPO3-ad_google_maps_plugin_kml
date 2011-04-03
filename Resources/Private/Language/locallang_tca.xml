@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for TCA belonging to extension 'ad_google_maps'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_adgooglemaps_domain_model_layer.type.kml">KML file</label>
+
+			<label index="tx_adgooglemaps_domain_model_layer.file">KML file:</label>
+			<label index="tx_adgooglemaps_domain_model_layer.url">KML URL:</label>
+			<label index="tx_adgooglemaps_domain_model_layer.suppressInfoWindows">Suppress info windows:</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_adgooglemaps_domain_model_layer.type.kml">KML-Datei</label>
+
+			<label index="tx_adgooglemaps_domain_model_layer.file">KML-Datei:</label>
+			<label index="tx_adgooglemaps_domain_model_layer.url">KML-URL:</label>
+			<label index="tx_adgooglemaps_domain_model_layer.suppressInfoWindows">Infofenster unterdrücken:</label>
+		</languageKey>
+	</data>
+</T3locallang>
