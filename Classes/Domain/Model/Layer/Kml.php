@@ -38,73 +38,73 @@ class Tx_AdGoogleMapsPluginKml_Domain_Model_Layer_Kml extends Tx_AdGoogleMaps_Do
 	/**
 	 * @var string
 	 */
-	protected $file;
+	protected $pluginKmlFile;
 
 	/**
 	 * @var string
 	 */
-	protected $url;
+	protected $pluginKmlUrl;
 
 	/**
 	 * @var boolean
 	 */
-	protected $suppressInfoWindows;
+	protected $pluginKmlSuppressInfoWindows;
 
 	/**
-	 * Sets this file
+	 * Sets this pluginKmlFile
 	 *
-	 * @param string $file
+	 * @param string $pluginKmlFile
 	 * @return void
 	 */
-	public function setFile($file) {
-		$this->file = $file;
+	public function setPluginKmlFile($pluginKmlFile) {
+		$this->pluginKmlFile = $pluginKmlFile;
 	}
 
 	/**
-	 * Returns this file
+	 * Returns this pluginKmlFile
 	 *
 	 * @return string
 	 */
-	public function getFile() {
-		return Tx_AdGoogleMaps_Utility_BackEnd::getRelativeUploadPathAndFileName('ad_google_maps_plugin_kml', 'kmlFiles', $this->file);
+	public function getPluginKmlFile() {
+		return Tx_AdGoogleMaps_Utility_BackEnd::getRelativeUploadPathAndFileName('ad_google_maps_plugin_kml', 'kmlFiles', $this->getPropertyValue('pluginKmlFile', 'layer'));
 	}
 
 	/**
-	 * Sets this url
+	 * Sets this pluginKmlUrl
 	 *
-	 * @param string $url
+	 * @param string $pluginKmlUrl
 	 * @return void
 	 */
-	public function setUrl($url) {
-		$this->url = $url;
+	public function setPluginKmlUrl($pluginKmlUrl) {
+		$this->pluginKmlUrl = $pluginKmlUrl;
 	}
 
 	/**
-	 * Returns this url
+	 * Returns this pluginKmlUrl
 	 *
 	 * @return string
 	 */
-	public function getUrl() {
-		return $this->url;
+	public function getPluginKmlUrl() {
+		return $this->getPropertyValue('pluginKmlUrl', 'layer');
 	}
 
 	/**
-	 * Sets this suppressInfoWindows.
+	 * Sets this pluginKmlSuppressInfoWindows.
 	 *
-	 * @param boolean $suppressInfoWindows
+	 * @param boolean $pluginKmlSuppressInfoWindows
 	 * @return void
 	 */
-	public function setSuppressInfoWindows($suppressInfoWindows) {
-		$this->suppressInfoWindows = (boolean) $suppressInfoWindows;
+	public function setPluginKmlSuppressInfoWindows($pluginKmlSuppressInfoWindows) {
+		$this->pluginKmlSuppressInfoWindows = (boolean) $pluginKmlSuppressInfoWindows;
 	}
 
 	/**
-	 * Returns this suppressInfoWindows.
+	 * Returns this pluginKmlSuppressInfoWindows.
 	 *
 	 * @return boolean
 	 */
-	public function isSuppressInfoWindows() {
-		return (boolean) $this->suppressInfoWindows;
+	public function isPluginKmlSuppressInfoWindows() {
+		return (boolean) $this->getPropertyValue('pluginKmlSuppressInfoWindows', 'layer');
 	}
 
 }

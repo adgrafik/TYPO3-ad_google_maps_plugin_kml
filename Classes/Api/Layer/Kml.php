@@ -32,7 +32,7 @@
  * @scope prototype
  * @api
  */
-class Tx_AdGoogleMapsPluginKml_Api_Layer_Kml extends Tx_AdGoogleMapsApi_Api_Layer_AbstractLayer {
+class Tx_AdGoogleMapsPluginKml_Api_Layer_Kml extends Tx_AdGoogleMaps_Api_Layer_AbstractLayer {
 
 	/**
 	 * @var string
@@ -40,7 +40,7 @@ class Tx_AdGoogleMapsPluginKml_Api_Layer_Kml extends Tx_AdGoogleMapsApi_Api_Laye
 	protected $url;
 
 	/**
-	 * @var Tx_AdGoogleMapsApi_Api_Map
+	 * @var Tx_AdGoogleMaps_Api_Map
 	 * @javaScriptHelper dontSetValue = TRUE
 	 */
 	protected $map;
@@ -60,7 +60,7 @@ class Tx_AdGoogleMapsPluginKml_Api_Layer_Kml extends Tx_AdGoogleMapsApi_Api_Laye
 	/**
 	 * Sets this map.
 	 *
-	 * @param Tx_AdGoogleMapsApi_Map $map
+	 * @param Tx_AdGoogleMaps_Map $map
 	 * @return Tx_AdGoogleMapsPluginKml_Api_Layer_Kml
 	 */
 	public function setMap($map) {

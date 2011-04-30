@@ -9,18 +9,18 @@ config.tx_extbase {
 			# Set type extensions.
 			Tx_AdGoogleMaps_Domain_Model_Layer {
 				subclasses {
-					Tx_AdGoogleMapsPluginKml_PluginAdapter_LayerBuilder_Kml = Tx_AdGoogleMapsPluginKml_Domain_Model_Layer_Kml
+					Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml = Tx_AdGoogleMapsPluginKml_Domain_Model_Layer_Kml
 				}
 			}
 
 			Tx_AdGoogleMapsPluginKml_Domain_Model_Layer_Kml {
 				mapping {
 					tableName = tx_adgooglemaps_domain_model_layer
-					recordType = Tx_AdGoogleMapsPluginKml_PluginAdapter_LayerBuilder_Kml
+					recordType = Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml
 					columns {
-						tx_adgooglemapspluginkml_file.mapOnProperty = file
-						tx_adgooglemapspluginkml_url.mapOnProperty = url
-						tx_adgooglemapspluginkml_suppress_info_windows.mapOnProperty = suppressInfoWindows
+						tx_adgooglemapspluginkml_file.mapOnProperty = pluginKmlFile
+						tx_adgooglemapspluginkml_url.mapOnProperty = pluginKmlUrl
+						tx_adgooglemapspluginkml_suppress_info_windows.mapOnProperty = pluginKmlSuppressInfoWindows
 					}
 				}
 			}
@@ -28,7 +28,7 @@ config.tx_extbase {
 	}
 }
 
-plugin.tx_adgooglemapsapi {
+plugin.tx_adgooglemaps {
 	settings {
 		plugin {
 
@@ -36,7 +36,7 @@ plugin.tx_adgooglemapsapi {
 			# This extends the page configuration. Use unique keys!
 			includeFrontEndResources {
 				# Use classname where they loaded as unique configuration key.
-				Tx_AdGoogleMapsPluginKml_PluginAdapter_LayerBuilder_Kml {
+				Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml {
 					includeJS {
 						Tx_AdGoogleMapsPluginKml_Plugin_Kml = EXT:ad_google_maps_plugin_kml/Resources/Public/JavaScript/Plugin/Tx_AdGoogleMapsPluginKml_Plugin_Kml.js
 					}

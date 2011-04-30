@@ -28,7 +28,7 @@
  * @copyright Copyright belongs to the respective authors
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
-Tx_AdGoogleMapsApi_Plugin.prototype.drawKml = function(layerIndex){
+Tx_AdGoogleMaps_Plugin.prototype.drawKml = function(layerIndex){
 	var _this = this;
 	var layerOptions = this.getLayerOptions(layerIndex);
 	var layerUid = layerOptions.uid;
