@@ -90,7 +90,7 @@ class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapB
 		$item->setLayerOptions($layerOptionsObject);
 		$this->layer->addItem($item);
 
-		$this->categoryItemKeys[] = $layerUid;
+		$this->addCategoryItemKey($layerUid);
 
 		return $layer;
 	}
