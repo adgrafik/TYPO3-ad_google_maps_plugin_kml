@@ -50,10 +50,10 @@ t3lib_extMgm::addTCAcolumns('tx_adgooglemaps_domain_model_layer', $tempColumns, 
 t3lib_extMgm::addLLrefForTCAdescr('tx_adgooglemaps_domain_model_layer', 'EXT:ad_google_maps_plugin_kml/Resources/Private/Language/locallang_tca_csh_layer.xml');
 
 // Add layer type icon.
-$TCA['tx_adgooglemaps_domain_model_layer']['ctrl']['typeicons']['Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml'] = t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/TCA/IconKml.gif';
-$TCA['tx_adgooglemaps_domain_model_layer']['columns']['type']['config']['items'][] = array('LLL:EXT:ad_google_maps_plugin_kml/Resources/Private/Language/locallang_tca.xml:tx_adgooglemaps_domain_model_layer.type.kml', 'Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml', 'EXT:ad_google_maps_plugin_kml/Resources/Public/Icons/TCA/IconKml.gif');
+$TCA['tx_adgooglemaps_domain_model_layer']['ctrl']['typeicons']['Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml'] = t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/TCA/IconKml.gif';
+$TCA['tx_adgooglemaps_domain_model_layer']['columns']['type']['config']['items'][] = array('LLL:EXT:ad_google_maps_plugin_kml/Resources/Private/Language/locallang_tca.xml:tx_adgooglemaps_domain_model_layer.type.kml', 'Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml', 'EXT:ad_google_maps_plugin_kml/Resources/Public/Icons/TCA/IconKml.gif');
 $TCA['tx_adgooglemaps_domain_model_layer']['palettes']['pluginKmlUrl'] = array('canNotCollapse' => true, 'showitem' => 'tx_adgooglemapspluginkml_url');
-$TCA['tx_adgooglemaps_domain_model_layer']['types']['Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml']['showitem'] = '
+$TCA['tx_adgooglemaps_domain_model_layer']['types']['Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml']['showitem'] = '
 		type, 
 			--palette--;LLL:EXT:ad_google_maps/Resources/Private/Language/locallang_tca.xml:tx_adgooglemaps_domain_model_layer.paletteTitle.system;system, 
 		title, 

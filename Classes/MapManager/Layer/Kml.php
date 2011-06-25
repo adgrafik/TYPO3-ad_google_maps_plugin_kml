@@ -28,14 +28,14 @@
  * @version $Id:$
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
-class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapBuilder_Layer_AbstractLayer {
+class Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml extends Tx_AdGoogleMaps_MapManager_Layer_AbstractLayer {
 
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
 		parent::__construct();
-		Tx_AdGoogleMaps_Utility_FrontEnd::includeFrontEndResources('Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml');
+		Tx_AdGoogleMaps_Utility_FrontEnd::includeFrontEndResources('Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml');
 	}
 
 	/**
