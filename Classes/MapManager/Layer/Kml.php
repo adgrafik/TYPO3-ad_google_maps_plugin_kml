@@ -43,7 +43,7 @@ class Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml extends Tx_AdGoogleMaps_MapM
 	 *
 	 * @param mixed $value
 	 * @param integer $index
-	 * @return Tx_AdGoogleMaps_Plugin_Options_Layer_LayerInterface
+	 * @return Tx_AdGoogleMaps_MapBuilder_Options_Layer_LayerInterface
 	 */
 	public function buildItem($index, $value) {
 		// Get list titles.
@@ -67,10 +67,10 @@ class Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml extends Tx_AdGoogleMaps_MapM
 		);
 
 		// Create layer.
-		$layer = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_Api_Layer_Kml', $layerOptions);
+		$layer = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_MapBuilder_Api_Layer_Kml', $layerOptions);
 
 		// Create option object.
-		$layerOptionsObject = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_Plugin_Options_Layer_Kml');
+		$layerOptionsObject = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_MapBuilder_Options_Layer_Kml');
 		$layerOptionsObject->setUid($layerUid);
 		$layerOptionsObject->setDrawFunctionName('drawKml');
 		$layerOptionsObject->setOptions($layer);
