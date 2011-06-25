@@ -38,7 +38,7 @@ plugin.tx_adgooglemaps {
 				# Use classname where they loaded as unique configuration key.
 				Tx_AdGoogleMapsPluginKml_MapManager_Layer_Kml {
 					includeJS {
-						Tx_AdGoogleMapsPluginKml_Plugin_Kml = EXT:ad_google_maps_plugin_kml/Resources/Public/JavaScript/Plugin/Tx_AdGoogleMapsPluginKml_Plugin_Kml.js
+						Tx_AdGoogleMapsPluginKml_MapBuilder_Kml = EXT:ad_google_maps_plugin_kml/Resources/Public/JavaScript/MapBuilder/Tx_AdGoogleMapsPluginKml_MapBuilder_Kml.js
 					}
 				}
 			}

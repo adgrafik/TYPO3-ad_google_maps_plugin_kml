@@ -3,3 +3,6 @@
 1.0.0	First release. Moved from ad_google_maps
 
 1.0.1	[TASK] Added all items of a category to categoryItemKeys in MapBuilder Layers like info windows.
+		[TASK] Changed naming MapBuilder to MapManager.
+		[TASK] Changed naming Plugin to MapBuilder.
+		[TASK] Moved Classes/Api to Classes/MapBuilder/Api.
