@@ -30,8 +30,6 @@ $tempColumns = array(
 		'l10n_mode' => $excludeFileTranslation,
 		'config' => array(
 			'type' => 'input',
-			'default' => '0',
-			'checkbox' => '0',
 			'size' => 24,
 			'eval' => 'trim',
 		),
