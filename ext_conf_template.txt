@@ -1,0 +1,6 @@
+
+uploadDirectories {
+
+	# cat=ad: Google Maps API/file/150; type=string; label=LLL:EXT:ad_google_maps_plugin_kml/Resources/Private/Language/locallang_extconf.xml:uploadDirectories.kmlFiles
+	kmlFiles = uploads/tx_adgooglemaps/
+}
