@@ -40,20 +40,20 @@ class Tx_AdGoogleMapsPluginKml_Api_Layer_Kml extends Tx_AdGoogleMaps_Api_Layer_A
 	protected $url;
 
 	/**
-	 * @var Tx_AdGoogleMaps_Api_Map
-	 * @javaScriptHelper dontSetValue = TRUE
+	 * @var Tx_AdGoogleMaps_Api_Map_Map
+	 * @jsonClassEncoder ignoreProperty
 	 */
 	protected $map;
 
 	/**
 	 * @var boolean
-	 * @jsonProperty dontSetIfValueIs = FALSE
+	 * @jsonProperty ignorePropertyIfValueIs = FALSE
 	 */
 	protected $preserveViewport;
 
 	/**
 	 * @var boolean
-	 * @jsonProperty dontSetIfValueIs = FALSE
+	 * @jsonProperty ignorePropertyIfValueIs = FALSE
 	 */
 	protected $suppressInfoWindows;
 

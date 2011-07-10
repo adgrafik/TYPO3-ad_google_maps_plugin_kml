@@ -31,10 +31,12 @@
 class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapBuilder_Layer_AbstractLayer {
 
 	/**
-	 * Constructor.
+	 * Initialize this objectManager.
+	 *
+	 * @return void
 	 */
-	public function __construct() {
-		parent::__construct();
+	public function initializeObject() {
+		parent::initializeObject();
 		Tx_AdGoogleMaps_Utility_FrontEnd::includeFrontEndResources('Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml');
 	}
 
@@ -67,10 +69,10 @@ class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapB
 		);
 
 		// Create layer.
-		$layer = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_Api_Layer_Kml', $layerOptions);
+		$layer = $this->objectManager->create('Tx_AdGoogleMapsPluginKml_Api_Layer_Kml', $layerOptions);
 
 		// Create option object.
-		$layerOptionsObject = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_Plugin_Options_Layer_Kml');
+		$layerOptionsObject = $this->objectManager->create('Tx_AdGoogleMapsPluginKml_Plugin_Options_Layer_Kml');
 		$layerOptionsObject->setUid($layerUid);
 		$layerOptionsObject->setDrawFunctionName('drawKml');
 		$layerOptionsObject->setOptions($layer);
@@ -81,7 +83,7 @@ class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapB
 
 		//	Create layer item.
 		$pluginMapObjectIdentifier = $this->googleMapsPlugin->getPluginMapObjectIdentifier();
-		$item = t3lib_div::makeInstance('Tx_AdGoogleMaps_Domain_Model_Item');
+		$item = $this->objectManager->create('Tx_AdGoogleMaps_Domain_Model_Item');
 		$item->setTitle($listTitle);
 		$item->setIcon($listIconOptions['url']);
 		$item->setIconWidth($listIconOptions['width']);
