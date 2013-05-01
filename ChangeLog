@@ -2,5 +2,7 @@
 
 1.0.1	[BUGFIX] Fixed wrong icon processing for list view.
 		[BUGFIX] Fixed wrong URL for uploaded KMLs.
+		[TASK] Adapted emconf depends
+		[TASK] Set state to stable
 
 1.0.0	First release. Moved from ad_google_maps
