@@ -31,12 +31,10 @@
 class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapBuilder_Layer_AbstractLayer {
 
 	/**
-	 * Initialize this objectManager.
-	 *
-	 * @return void
+	 * Constructor.
 	 */
-	public function initializeObject() {
-		parent::initializeObject();
+	public function __construct() {
+		parent::__construct();
 		Tx_AdGoogleMaps_Utility_FrontEnd::includeFrontEndResources('Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml');
 	}
 
@@ -53,7 +51,7 @@ class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapB
 
 		// Get list icons.
 		$listIconOptions = array(
-			'url' => $this->layer->getListIcon(),
+			'url' => Tx_AdGoogleMaps_Utility_BackEnd::getRelativeUploadPathAndFileName('ad_google_maps', 'markerIcons', $this->layer->getListIcon()),
 			'width' => $this->layer->getListIconWidth(),
 			'height' => $this->layer->getListIconHeight(),
 		);
@@ -69,10 +67,10 @@ class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapB
 		);
 
 		// Create layer.
-		$layer = $this->objectManager->create('Tx_AdGoogleMapsPluginKml_Api_Layer_Kml', $layerOptions);
+		$layer = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_Api_Layer_Kml', $layerOptions);
 
 		// Create option object.
-		$layerOptionsObject = $this->objectManager->create('Tx_AdGoogleMapsPluginKml_Plugin_Options_Layer_Kml');
+		$layerOptionsObject = t3lib_div::makeInstance('Tx_AdGoogleMapsPluginKml_Plugin_Options_Layer_Kml');
 		$layerOptionsObject->setUid($layerUid);
 		$layerOptionsObject->setDrawFunctionName('drawKml');
 		$layerOptionsObject->setOptions($layer);
@@ -83,7 +81,7 @@ class Tx_AdGoogleMapsPluginKml_MapBuilder_Layer_Kml extends Tx_AdGoogleMaps_MapB
 
 		//	Create layer item.
 		$pluginMapObjectIdentifier = $this->googleMapsPlugin->getPluginMapObjectIdentifier();
-		$item = $this->objectManager->create('Tx_AdGoogleMaps_Domain_Model_Item');
+		$item = t3lib_div::makeInstance('Tx_AdGoogleMaps_Domain_Model_Item');
 		$item->setTitle($listTitle);
 		$item->setIcon($listIconOptions['url']);
 		$item->setIconWidth($listIconOptions['width']);

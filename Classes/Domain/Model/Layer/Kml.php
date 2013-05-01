@@ -66,7 +66,7 @@ class Tx_AdGoogleMapsPluginKml_Domain_Model_Layer_Kml extends Tx_AdGoogleMaps_Do
 	 * @return string
 	 */
 	public function getPluginKmlFile() {
-		return Tx_AdGoogleMaps_Utility_BackEnd::getRelativeUploadPathAndFileName('ad_google_maps_plugin_kml', 'kmlFiles', $this->getPropertyValue('pluginKmlFile', 'layer'));
+		return t3lib_div::getIndpEnv('TYPO3_SITE_URL') . Tx_AdGoogleMaps_Utility_BackEnd::getRelativeUploadPathAndFileName('ad_google_maps_plugin_kml', 'kmlFiles', $this->getPropertyValue('pluginKmlFile', 'layer'));
 	}
 
 	/**
